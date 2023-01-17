@@ -60,8 +60,5 @@ POST REQUESTS:
 /ordertotal retrieves the total of the transaction and updates/adds this information to the vendor object
 
 /addnewitem retrieves the values inputted from the user, parses it and adds it to the current vendor supplies list as a new item.
-
-		<img width="1173" alt="Screenshot 2023-01-17 at 11 40 16 AM" src="https://user-images.githubusercontent.com/91279431/212962458-00866607-84d7-4013-9311-38d56dd704db.png">
-
 		
 		
