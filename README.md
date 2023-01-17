@@ -61,6 +61,6 @@ POST REQUESTS:
 
 /addnewitem retrieves the values inputted from the user, parses it and adds it to the current vendor supplies list as a new item.
 
-![Screenshot](Screenshot 2023-01-17 at 11.40.16 AM.png)
+<img width="1173" alt="Screenshot 2023-01-17 at 11 40 16 AM" src="https://user-images.githubusercontent.com/91279431/212963487-1e9995a6-f14e-4524-8dd2-3448b65e292a.png">
 
 		
