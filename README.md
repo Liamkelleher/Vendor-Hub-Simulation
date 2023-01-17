@@ -1,15 +1,21 @@
+----------------------------------------
 Author:
+----------------------------------------
 Liam Kelleher
- 
+
+----------------------------------------
 Purpose: 
-To develop a server capable of serving order form resources that allows a user to browse office supplies for several vendors, 
+----------------------------------------
+- To develop a server capable of serving order form resources that allows a user to browse office supplies for several vendors, 
 add items from a vendor to an order, and simulate placing an order. 
-Server is responsible for tracking some sales data for each vendor and providing that sales data in HTML format when requested.
-Supports purchasing simulation for products, ability to change vendor to access different products.
+- Server is responsible for tracking some sales data for each vendor and providing that sales data in HTML format when requested.
+- Supports purchasing simulation for products, ability to change vendor to access different products.
+- Uses server-side programming with AJAX.
 
 
+----------------------------------------
 Before Running program, do the following:
-
+----------------------------------------
 NPM installs: 
 1. (In the terminal) npm install pug
 
@@ -18,9 +24,9 @@ Execution:
 2. (Go to this link in your web browser to view the server application) http://127.0.0.1:3000/
 
 
-
+----------------------------------------
 New functions and their purposes:
-
+----------------------------------------
 Client.js:
 
 newItemHTML() -> is responsible for displaying the html for adding new items to vendors. It takes into account the current vendor's supplies and puts the categories in a 'select' list. The rest of the input fields and labels are created by adding each html element to a result variable, which is returned when this function is called
@@ -32,9 +38,9 @@ server.js:
 
 When the server loads, it first reads, from the vendors directory, each vendor.JSON object and stores all relevant information in the files to the server.
 
-
+----------------------------------------
 GET REQUESTS:
-
+----------------------------------------
 Once the server is ready stop start, a GET request to /index.html is sent. This will load the homepage of the site which renders the index.pug file and displays a simple welcome page
 
 GET request to /order will read the orderform.html file and load its content to the server
@@ -46,9 +52,9 @@ GET request to /stats will load the statistics page by reading the stats.pug fil
 
 GET requests to /vendors, /client.js/ /styles.css, /add.png, and /remove.png simply reads each file from the folder and each file is loaded to the server.
 
-
+----------------------------------------
 POST REQUESTS:
-
+----------------------------------------
 /submit request is responsible for saving the purchased data to server. It parses the stringified order from the client and performed various operations to update stock, and vendor statistics
 
 /ordertotal retrieves the total of the transaction and updates/adds this information to the vendor object
