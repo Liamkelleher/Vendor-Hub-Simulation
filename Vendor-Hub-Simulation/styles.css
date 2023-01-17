@@ -1,0 +1,47 @@
+body {
+    padding-left: 10px;
+}
+
+select#vendor-select {
+    position: absolute;
+    left: 70%;
+    font-size: x-large;    
+}
+select#selectCategory {
+    font-size: large;    
+}
+
+.column {
+    float: left;
+}
+
+.left {
+    width: 25%;
+}
+
+.middle {
+    width: 40%;
+}
+
+.right {
+    width: 29%;
+}
+
+button {
+    width: 140px;
+    padding: 15px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer; 
+ }
+ button#newItemSubmit {
+    width: 140px;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer; 
+    font-size: medium;    
+
+ }

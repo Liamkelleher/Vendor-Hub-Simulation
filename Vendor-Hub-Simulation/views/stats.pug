@@ -1,0 +1,31 @@
+html
+	head
+		title Store Home Page
+	body
+		include ../views/header
+
+		div#main
+			h1 Welcome to the Store Stats Page!
+			each vendor in vendorsList
+				div(name = vendor.name)
+					h3 #{vendor.name}
+					div#totalOrders
+					if typeof vendor.totalOrders === "number"
+						p &nbsp;&nbsp;&nbsp; <b>Total Orders: </b> #{vendor.totalOrders}
+					else 
+						p &nbsp;&nbsp;&nbsp; <b>Total Orders: </b> 0
+					div#totalAvgAmount
+					//if total order is valid number (greater than 0)
+					if typeof vendor.totalOrders === "number"
+						p &nbsp;&nbsp;&nbsp; <b>Avg Total order: </b> $#{vendor.avgTotalOrder}
+					else 
+						p &nbsp;&nbsp;&nbsp; <b>Avg Total order: </b> $0
+
+					div#mostPopular
+						p &nbsp;&nbsp;&nbsp; <b>Most Popular Item: </b> 
+					br
+
+//- Total number of orders received
+//- 2. Average order total (subtotal + 10% tax + delivery fee).
+//- 3. Name of the most popular item, or the name of one of the most popular if there is a tie. The
+//- most popular item is the one that has sold the most units (multiple units in an order should be counted multiple times).
